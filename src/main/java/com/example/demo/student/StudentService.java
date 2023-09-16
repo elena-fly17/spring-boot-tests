@@ -12,7 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @Service
 public class StudentService {
-
     private final StudentRepository studentRepository;
 
     public List<Student> getAllStudents() {
@@ -26,7 +25,6 @@ public class StudentService {
             throw new BadRequestException(
                     "Email " + student.getEmail() + " taken");
         }
-
         studentRepository.save(student);
     }
 
